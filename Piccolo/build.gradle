@@ -3,6 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+
+apply from: '../maven-publish.gradle'
+
+
 android {
     namespace 'com.xsir.piccolo'
     compileSdk 33
@@ -28,6 +32,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+}
+
+ext {
+    artifact = 'com.xsir.piccolo'
+    libraryName = 'Piccolo'
+    libraryDescription = '一个骨架屏的控件'
+    libraryVersion = '1.0.0'
 }
 
 dependencies {
